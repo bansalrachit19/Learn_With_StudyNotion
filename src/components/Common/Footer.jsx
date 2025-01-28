@@ -61,19 +61,34 @@ const Footer = () => {
               </h1>
 
               <div className="flex flex-col gap-2 mt-2">
-                {Resources.map((ele, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                    >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
-                        {ele}
-                      </Link>
-                    </div>
-                  );
-                })}
-              </div>
+  {Resources.map((ele, index) => {
+    const resourceLinks = {
+      Articles: "https://www.medium.com/articles",
+      Blog: "https://www.blogsite.com",
+      "Chart Sheet": "https://www.datasheets.com/charts",
+      "Code challenges": "https://www.codewars.com",
+      Docs: "https://developer.mozilla.org/en-US/",
+      Projects: "https://github.com",
+      Videos: "https://www.youtube.com",
+      Workspaces: "https://www.slack.com",
+    };
+
+    return (
+      <div
+        key={index}
+        className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+      >
+        <a
+          href={resourceLinks[ele]}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {ele}
+        </a>
+      </div>
+    );
+  })}
+</div>
 
               <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">
                 Support
@@ -125,27 +140,34 @@ const Footer = () => {
 
           {/* Section 2 */}
           <div className="lg:w-[50%] flex flex-wrap flex-row justify-between pl-3 lg:pl-5 gap-3">
-            {FooterLink2.map((ele, i) => {
-              return (
-                <div key={i} className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
-                  <h1 className="text-richblack-50 font-semibold text-[16px]">
-                    {ele.title}
-                  </h1>
-                  <div className="flex flex-col gap-2 mt-2">
-                    {ele.links.map((link, index) => {
-                      return (
-                        <div
-                          key={index}
-                          className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                        >
-                          <Link to={link.link}>{link.title}</Link>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
+          {FooterLink2.map((ele, i) => {
+  return (
+    <div key={i} className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
+      <h1 className="text-richblack-50 font-semibold text-[16px]">
+        {ele.title}
+      </h1>
+      <div className="flex flex-col gap-2 mt-2">
+        {ele.links.map((link, index) => {
+          return (
+            <div
+              key={index}
+              className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+            >
+              <a
+                href={link.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.title}
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+})}
+
           </div>
         </div>
       </div>
@@ -154,25 +176,27 @@ const Footer = () => {
         {/* Section 1 */}
         <div className="flex justify-between lg:items-start items-center flex-col lg:flex-row gap-3 w-full">
           <div className="flex flex-row">
-            {BottomFooter.map((ele, i) => {
-              return (
-                <div
-                  key={i}
-                  className={` ${
-                    BottomFooter.length - 1 === i
-                      ? ""
-                      : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                  } px-3 `}
-                >
-                  <Link to={ele.split(" ").join("-").toLocaleLowerCase()}>
-                    {ele}
-                  </Link>
-                </div>
-              );
-            })}
+          {BottomFooter.map((ele, i) => {
+  return (
+    <div
+      key={i}
+      className={`${
+        BottomFooter.length - 1 === i
+          ? ""
+          : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
+      } px-3 `}
+    >
+      {/* Link each item to its respective route */}
+      <Link to={`/${ele.split(" ").join("-").toLocaleLowerCase()}`}>
+        {ele}
+      </Link>
+    </div>
+  );
+})}
+
           </div>
 
-          <div className="text-center">Made with ❤️ CodeHelp © 2023 Studynotion</div>
+          <div className="text-center">Made with ❤️ Rachit © 2025 Studynotion</div>
         </div>
       </div>
     </div>

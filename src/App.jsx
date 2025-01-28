@@ -98,6 +98,68 @@ function App() {
             </OpenRoute>
           }
         />
+        {/* footer routes------------------------------- */}
+        <Route
+          path="help-center"
+          element={
+            <OpenRoute>
+              <Contact />
+            </OpenRoute>
+          }
+        />
+        <Route
+          path="paid-memberships"
+          element={
+            <OpenRoute>
+              <Contact />
+            </OpenRoute>
+          }
+        />
+        <Route
+          path="for-students"
+          element={
+            <OpenRoute>
+              <Contact />
+            </OpenRoute>
+          }
+        />
+        <Route
+          path="business-solutions"
+          element={
+            <OpenRoute>
+              <Contact />
+            </OpenRoute>
+          }
+        />
+        <Route
+          path="forums"
+          element={
+            <OpenRoute>
+              <Contact />
+            </OpenRoute>
+          }
+        />
+        <Route
+          path="chapters"
+          element={
+            <OpenRoute>
+              <Contact />
+            </OpenRoute>
+          }
+        />
+        <Route
+          path="events"
+          element={
+            <OpenRoute>
+              <Contact />
+            </OpenRoute>
+          }
+        />
+        <Route path="/privacy-policy" element={<Contact />} />
+        <Route path="/cookie-policy" element={<Contact />} />
+         <Route path="/terms" element={<Contact />} />
+        {/* ----------------------------------------------------- */}
+
         {/* Private Route - for Only Logged in User */}
         <Route
           element={
