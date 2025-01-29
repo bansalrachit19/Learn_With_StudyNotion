@@ -73,8 +73,20 @@
      npm run dev
 
 ### 📈 Live Demo
+
 You can explore the live version of the application: 
 https://learn-with-study-notion-frontend.vercel.app/
+
+### 📸 Screenshots
+
+Here are some screenshots of the application:
+
+![Homepage_1](imageReadme/homepage.png)
+![Homepage_2](imageReadme/homepage_2.png)
+![Homepage_3](imageReadme/homepage_3.png)
+![Dashboard_1](imageReadme/dashboard_1.png)
+![Dashboard_2](imageReadme/dashboard_2.png)
+
 
 ### 👨‍💻 Contributing
 If you'd like to contribute to the project, feel free to open an issue or create a pull request. Contributions are always welcome!
